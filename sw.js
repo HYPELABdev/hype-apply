@@ -1,1 +1,8 @@
-const CACHE="gitgen-hype-apply-v4"; const ASSETS=['./','./index.html','./app.html','./offline.html','./manifest.json','./icon/icon.png','./icon/splash.png','./icon/bg.jpg']; self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS).catch(()=>c.addAll(['./','./app.html','./index.html']))))}); self.addEventListener('fetch',e=>{e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request).catch(()=>caches.match('./offline.html'))))});
+const CACHE = "hype-apply-v1";
+const ASSETS = ["./","./index.html","./app.html","./manifest.json","./icon/icon.png","./icon/bg.png"];
+self.addEventListener("install", e => {
+  e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)));
+});
+self.addEventListener("fetch", e => {
+  e.respondWith(caches.match(e.request).then(r => r || fetch(e.request)));
+});
