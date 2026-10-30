@@ -1,6 +1,6 @@
 {
-  "name": "hype-apply",
-  "short_name": "hypeapply",
+  "name": "Hype Apply",
+  "short_name": "HypeApply",
   "start_url": "./app.html",
   "display": "standalone",
   "background_color": "#060a08",
@@ -13,7 +13,7 @@
       "purpose": "any maskable"
     },
     {
-      "src": "./icon/splash.png",
+      "src": "./icon/icon.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
